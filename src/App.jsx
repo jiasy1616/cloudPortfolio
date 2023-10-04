@@ -5,7 +5,6 @@ import { EffectComposer, Noise } from "@react-three/postprocessing";
 import { Overlay } from "./components/Overlay";
 import { usePlay } from "./contexts/Play";
 import { useMemo } from "react";
-
 function App() {
   const { play, end } = usePlay();
 

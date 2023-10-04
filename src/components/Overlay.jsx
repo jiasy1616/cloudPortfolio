@@ -1,9 +1,11 @@
 import { useProgress } from "@react-three/drei";
 import "./Overlay.css";
 import { usePlay } from "../contexts/Play";
+import { useRef } from "react";
 
 export const Overlay = () => {
   const { progress } = useProgress();
+  const audio = useRef();
   const { play, end, setPlay, hasScroll } = usePlay();
 
   return (
@@ -24,12 +26,14 @@ export const Overlay = () => {
                 <div className="spinner_image"></div>
               </div>
             </h1>
+            <audio src="/music/music.mp3" ref={audio}></audio>
             <p className="intro__scroll">Scroll to begin the journey</p>
             <button
               className="explore"
               onClick={() => {
                 setPlay(true);
                 setPlay(true);
+                audio.current.play();
               }}
             >
               Explore

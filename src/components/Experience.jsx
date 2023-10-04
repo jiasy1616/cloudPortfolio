@@ -13,7 +13,7 @@ import { usePlay } from "../contexts/Play";
 import { Speed } from "./Speed";
 
 const LINE_NB_POINTS = 1000;
-const CURVE_DISTANCE = 250;
+const CURVE_DISTANCE = 200;
 const CURVE_AHEAD_CAMERA = 0.008;
 const CURVE_AHEAD_AIRPLANE = 0.02;
 const AIRPLANE_MAX_ANGLE = 35;
